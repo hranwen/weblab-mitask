@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
+import Header from "./pages/Header.js";
+import Main from "./pages/Main.js";
 
-import "../utilities.css";
+import "./css/utilities.css";
+import "./css/App.css";
 
 import { socket } from "../client-socket.js";
 
@@ -47,7 +50,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Router>
+        {/*         <Router>
           <Skeleton
             path="/"
             handleLogin={this.handleLogin}
@@ -55,7 +58,8 @@ class App extends Component {
             userId={this.state.userId}
           />
           <NotFound default />
-        </Router>
+        </Router> */}
+        <Header />
       </>
     );
   }
